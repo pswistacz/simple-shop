@@ -12,12 +12,10 @@ export class CartService {
   Cart = this.cartSubject.asObservable();
 
   cartContent: Cart[] = this.getCart();
-  showCart = 'closed';
+  showCart = false;
 
   addToCart(product: Product) {
-    if (this.cartContent && this.cartContent.length === 0) {
-      this.showCart = 'open';
-    }
+    this.cartContent && this.cartContent.length === 0 ? this.showCart = true : this.showCart = false;
     this.cartContent.push({
       id: product.id,
       qty: 1,

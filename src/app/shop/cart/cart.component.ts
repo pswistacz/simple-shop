@@ -25,8 +25,9 @@ export class CartComponent implements OnInit {
     cartService.Cart.subscribe((cartProducts) => {
       this.cartProducts = cartProducts;
       this.countTotalPrice();
-      if (this.cartService.showCart === 'open') {
-        this.state = this.cartService.showCart;
+      if (this.cartService.showCart) {
+        this.state = 'open';
+        this.collapseTitle = 'Hide Cart';
       }
     });
   }
