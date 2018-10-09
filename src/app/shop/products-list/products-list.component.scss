@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+h2.product-list__title {
+  display: inline;
+}
+
+.select-sorting {
+  display: inline-block;
+  margin-left: 10%;
+  text-align: center;
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.product-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  @media (min-width: $small) {
+    justify-content: space-around;
+  }
+
+  &__container {
+    width: 98%;
+    margin: 20px 0;
+
+    @media (min-width: $small) {
+      width: $box-size-sm;
+    }
+    @media (min-width: $large) {
+      width: $box-size-lg;
+    }
+    @media (min-width: $extra-large) {
+      width: $box-size-extra-lg;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin set-border($weight: 1px, $type: solid, $color: transparent, $radius: 0px) {
+  border: $weight $type $color;
+  border-radius: $radius;
+}
+
+

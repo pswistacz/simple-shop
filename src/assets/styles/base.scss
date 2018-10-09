@@ -1,0 +1,23 @@
+@import 'variables';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $font-color;
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+
+  @media (min-width: $extra-large) {
+    width: $container-width-lg;
+  }
+}
+
+.bold-text {
+  font-weight: 700;
+  font-size: 1.3em;
+}

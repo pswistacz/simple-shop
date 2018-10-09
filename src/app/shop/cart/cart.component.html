@@ -1,0 +1,26 @@
+<div class="collapse-cart">
+  <h2 class="collapse-cart__title">Cart</h2>
+  <div class="cart-button" type="button" (click)="collapse()">{{collapseTitle}}</div>
+  <div class="collapse-cart__content" [@collapse]="state">
+    <div class="cart-list" *ngIf="cartProducts && cartProducts.length > 0; else noItemsInfo" [@collapse]="state">
+      <div *ngFor="let item of cartProducts; let i = index" class="cart-list__item">
+        <img class="cart-list__img" src="{{item.thumbnailimage}}"/>
+        <div class="cart-list__details">
+          <div class="cart-list__title">{{item.name}}</div>
+          <div class="cart-list__qty">
+            <span>{{item.qty}}</span>
+            <div class="cart-list__qty--buttons">
+              <div class="plusSign" (click)="add(i)">+</div>
+              <div class="minusSign" (click)="remove(item.id, i)">-</div>
+            </div>
+          </div>
+          <div class="cart-list__price bold-text">{{item.totalPrice | currency}}</div>
+        </div>
+      </div>
+      <div class="cart-list__total-cost bold-text" *ngIf="totalPrice > 0">total cost: {{totalPrice | currency}}</div>
+    </div>
+    <ng-template #noItemsInfo>
+      <div class="no-items-info">Your cart is empty</div>
+    </ng-template>
+  </div>
+</div>

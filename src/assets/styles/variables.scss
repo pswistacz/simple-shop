@@ -1,0 +1,28 @@
+//screen sizes
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+$container-width: 100%;
+$container-width-lg: $extra-large;
+
+$number-of-boxes-sm: 2;
+$number-of-boxes-lg: 3;
+$number-of-boxes-extra-lg: 4;
+
+//product-list-item size
+$box-size-sm: $container-width/$number-of-boxes-sm;
+$box-size-lg: $container-width/$number-of-boxes-lg;
+$box-size-extra-lg: $container-width-lg/$number-of-boxes-extra-lg;
+
+//colors
+$font-color: #333;
+$blue-light: #3bb1d5;
+$blue: #2795b6;
+$blue-dark: #045555;
+$white: #fff;
+$gray-light: #eee;
+$gray: #ccc;
+$gray-dark: #aaa;
+
