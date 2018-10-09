@@ -8,7 +8,7 @@ import {CartService} from '../../services/cart.service';
   styleUrls: ['./products-item.component.scss']
 })
 export class ProductsItemComponent {
-  @Input() product: Product[];
+  @Input() product: Product;
   constructor(private cartService: CartService) { }
 
   addToCart(item: Product) {
